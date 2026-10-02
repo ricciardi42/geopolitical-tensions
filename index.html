@@ -193,7 +193,7 @@ svg text { fill: var(--muted); font-family: var(--body); font-size: 13px; }
 
       <section class="notes">
         <p><b>How it is computed.</b> Gross monthly total returns: S&amp;P 500 (CRSP value-weighted index), long-term government bonds and the T-bill from the Goyal–Welch data; P5 = T-bill + excess return of the top quintile of stocks sorted on GPT beta (value-weighted). Geopolitical threats (GPT) and acts (GPA) from <a href="https://doi.org/10.1257/aer.20191823" target="_blank" rel="noopener">Caldara and Iacoviello (2022)</a>, monthly from 1900. A month is high when the index at the end of the previous month is at or above the cutoff; weights are reset every month. Average return and volatility are annualized (×12, ×√12); the Sharpe ratio uses returns in excess of the T-bill.</p>
-        <p><b>Read with care.</b> Results are in-sample, before trading costs and taxes. With "Full sample" the cutoff uses 1930–2024 data, which a real investor would not yet have had. "Expanding window" uses only the index from January 1900 up to the signal month, so the signal is known in real time. </p>
+        <p><b>Read with care.</b> Results are in-sample, before trading costs and taxes. With "Full sample" the cutoff uses 1930–2024 data, which a real investor would not yet have had. "Expanding window" uses only the index from January 1900 up to the signal month, so the signal is known in real time. The signal is applied in real time: the index at the end of each month sets the weights for the next month. The 'Best' portfolio is selected ex-post over the sample: it tries every weight on the sample returns and keeps the best. </p>
       </section>
     </main>
   </div>
